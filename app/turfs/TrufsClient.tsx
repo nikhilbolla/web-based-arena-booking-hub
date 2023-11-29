@@ -11,12 +11,12 @@ import Heading from "@/app/components/Heading";
 import Container from "@/app/components/Container";
 import ListingCard from "@/app/components/listings/ListingCard";
 
-interface TripsClientProps {
+interface TurfsClientProps {
   reservations: SafeReservation[],
   currentUser?: SafeUser | null,
 }
 
-const TripsClient: React.FC<TripsClientProps> = ({
+const TurfsClient: React.FC<TurfsClientProps> = ({
   reservations,
   currentUser
 }) => {
@@ -42,7 +42,7 @@ const TripsClient: React.FC<TripsClientProps> = ({
   return (
     <Container>
       <Heading
-        title="Trips"
+        title="Turfs"
         subtitle="Where you've been and where you're going"
       />
       <div 
@@ -75,4 +75,4 @@ const TripsClient: React.FC<TripsClientProps> = ({
    );
 }
  
-export default TripsClient;
+export default TurfsClient;

@@ -5,7 +5,7 @@ import ClientOnly from "@/app/components/ClientOnly";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import getReservations from "@/app/actions/getReservations";
 
-import TripsClient from "./TripsClient";
+import TripsClient from "./TrufsClient";
 
 const TripsPage = async () => {
   const currentUser = await getCurrentUser();
@@ -27,8 +27,8 @@ const TripsPage = async () => {
     return (
       <ClientOnly>
         <EmptyState
-          title="No trips found"
-          subtitle="Looks like you havent reserved any trips."
+          title="No Turfs found"
+          subtitle="Looks like you havent reserved any turfs."
         />
       </ClientOnly>
     );

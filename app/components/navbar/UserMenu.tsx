@@ -58,7 +58,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
             cursor-pointer
           "
         >
-          Airbnb your home
+          Add Turf
         </div>
         <div 
         onClick={toggleOpen}
@@ -103,8 +103,8 @@ const UserMenu: React.FC<UserMenuProps> = ({
             {currentUser ? (
               <>
                 <MenuItem 
-                  label="My trips" 
-                  onClick={() => router.push('/trips')}
+                  label="My Turfs" 
+                  onClick={() => router.push('/turfs')}
                 />
                 <MenuItem 
                   label="My favorites" 
@@ -119,7 +119,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                   onClick={() => router.push('/properties')}
                 />
                 <MenuItem 
-                  label="Airbnb your home" 
+                  label="Add your Turf" 
                   onClick={rentModal.onOpen}
                 />
                 <hr />
