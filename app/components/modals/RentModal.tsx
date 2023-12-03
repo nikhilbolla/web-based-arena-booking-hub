@@ -51,9 +51,9 @@ const RentModal = () => {
     defaultValues: {
       category: '',
       location: null,
-      guestCount: 1,
-      roomCount: 1,
-      bathroomCount: 1,
+      playerCount: 1,
+      sessionCount: 1,
+      area: 1,
       imageSrc: '',
       price: 1,
       title: '',
@@ -63,9 +63,9 @@ const RentModal = () => {
 
   const location = watch('location');
   const category = watch('category');
-  const guestCount = watch('guestCount');
-  const roomCount = watch('roomCount');
-  const bathroomCount = watch('bathroomCount');
+  const playerCount = watch('playerCount');
+  const sessionCount = watch('sessionCount');
+  const area = watch('area');
   const imageSrc = watch('imageSrc');
 
   const Map = useMemo(() => dynamic(() => import('../Map'), { 
@@ -131,7 +131,7 @@ const RentModal = () => {
   let bodyContent = (
     <div className="flex flex-col gap-8">
       <Heading
-        title="Which of these best describes your place?"
+        title="Which of these best describes your Turf?"
         subtitle="Pick a category"
       />
       <div 
@@ -183,22 +183,22 @@ const RentModal = () => {
           subtitle="What amenitis do you have?"
         />
         <Counter 
-          onChange={(value) => setCustomValue('guestCount', value)}
-          value={guestCount}
+          onChange={(value) => setCustomValue('playerCount', value)}
+          value={playerCount}
           title="Players" 
           subtitle="How many players do you allow?"
         />
         <hr />
         <Counter 
-          onChange={(value) => setCustomValue('roomCount', value)}
-          value={roomCount}
+          onChange={(value) => setCustomValue('sessionCount', value)}
+          value={sessionCount}
           title="Sessions" 
           subtitle="1 Hour of play considered as 1 Session"
         />
         <hr />
         <Counter 
-          onChange={(value) => setCustomValue('bathroomCount', value)}
-          value={bathroomCount}
+          onChange={(value) => setCustomValue('area', value)}
+          value={area}
           title="Area" 
           subtitle="Preferred Area of Play Ground"
         />

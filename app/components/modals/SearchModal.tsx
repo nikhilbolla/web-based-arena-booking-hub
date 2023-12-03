@@ -31,9 +31,9 @@ const SearchModal = () => {
   const [step, setStep] = useState(STEPS.LOCATION);
 
   const [location, setLocation] = useState<CountrySelectValue>();
-  const [guestCount, setGuestCount] = useState(1);
-  const [roomCount, setRoomCount] = useState(1);
-  const [bathroomCount, setBathroomCount] = useState(1);
+  const [playerCount, setplayerCount] = useState(1);
+  const [sessionCount, setsessionCount] = useState(1);
+  const [area, setarea] = useState(1);
   const [dateRange, setDateRange] = useState<Range>({
     startDate: new Date(),
     endDate: new Date(),
@@ -66,9 +66,9 @@ const SearchModal = () => {
     const updatedQuery: any = {
       ...currentQuery,
       locationValue: location?.value,
-      guestCount,
-      roomCount,
-      bathroomCount
+      playerCount,
+      sessionCount,
+      area
     };
 
     if (dateRange.startDate) {
@@ -93,11 +93,11 @@ const SearchModal = () => {
     searchModal, 
     location, 
     router, 
-    guestCount, 
-    roomCount,
+    playerCount, 
+    sessionCount,
     dateRange,
     onNext,
-    bathroomCount,
+    area,
     params
   ]);
 
@@ -156,24 +156,24 @@ const SearchModal = () => {
           subtitle="Find your perfect place!"
         />
         <Counter 
-          onChange={(value) => setGuestCount(value)}
-          value={guestCount}
+          onChange={(value) => setplayerCount(value)}
+          value={playerCount}
           title="Players" 
           subtitle="How many players are coming?"
         />
         <hr />
         <Counter 
-          onChange={(value) => setRoomCount(value)}
-          value={roomCount}
+          onChange={(value) => setsessionCount(value)}
+          value={sessionCount}
           title="Sessions" 
           subtitle="1 Hour of play considered as 1 Session"
         />        
         <hr />
         <Counter 
           onChange={(value) => {
-            setBathroomCount(value)
+            setarea(value)
           }}
-          value={bathroomCount}
+          value={area}
           title="Area"
           subtitle="Preferred Area of Play Ground"
         />

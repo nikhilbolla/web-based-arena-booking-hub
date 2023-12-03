@@ -17,11 +17,11 @@ Features:
 - Page loading state
 - Page empty state
 - Booking / Reservation system
-- Guest reservation cancellation
+- player reservation cancellation
 - Owner reservation cancellation
 - Creation and deletion of properties
 - Pricing calculation
-- Advanced search algorithm by category, date range, map location, number of guests, rooms and bathrooms
+- Advanced search algorithm by category, date range, map location, number of players, rooms and bathrooms
     - For example we will filter out properties that have a reservation in your desired date range to travel
 - Favorites system
 - Shareable URL filters

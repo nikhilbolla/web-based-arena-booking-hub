@@ -16,7 +16,7 @@ const Search = () => {
   const  locationValue = params?.get('locationValue'); 
   const  startDate = params?.get('startDate');
   const  endDate = params?.get('endDate');
-  const  guestCount = params?.get('guestCount');
+  const  playerCount = params?.get('playerCount');
 
   const locationLabel = useMemo(() => {
     if (locationValue) {
@@ -42,13 +42,13 @@ const Search = () => {
     return 'Any Week'
   }, [startDate, endDate]);
 
-  const guestLabel = useMemo(() => {
-    if (guestCount) {
-      return `${guestCount} Players`;
+  const playerLabel = useMemo(() => {
+    if (playerCount) {
+      return `${playerCount} Players`;
     }
 
     return 'Add Players';
-  }, [guestCount]);
+  }, [playerCount]);
 
   return ( 
     <div
@@ -108,7 +108,7 @@ const Search = () => {
             gap-3
           "
         >
-          <div className="hidden sm:block">{guestLabel}</div>
+          <div className="hidden sm:block">{playerLabel}</div>
           <div 
             className="
               p-2 
