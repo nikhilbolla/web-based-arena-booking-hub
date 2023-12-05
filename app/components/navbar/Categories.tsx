@@ -2,8 +2,8 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import { MdOutlineSportsCricket } from "react-icons/md";
-import { FaSwimmingPool } from "react-icons/fa";
 import { CiFootball } from "react-icons/ci";
+import { IoGolfOutline } from "react-icons/io5";
 import { GiTennisRacket } from "react-icons/gi";
 import { CiBasketball } from "react-icons/ci";
 
@@ -18,14 +18,9 @@ export const categories = [
     description: 'Playground for Playing Cricket!',
   },
   {
-    label: 'SwimmingPool',
-    icon: FaSwimmingPool,
-    description: 'Pools for Swimming!',
-  },
-  {
     label: 'Football',
     icon: CiFootball,
-    description: 'Playground for Playing Basket Ball!'
+    description: 'Playground for Playing Foot Ball!'
   },
   {
     label: 'Tennis',
@@ -35,7 +30,12 @@ export const categories = [
   {
     label: 'Basketball',
     icon: CiBasketball,
-    description: 'This is property has a beautiful pool!'
+    description: 'Playground for Playing BasketBall!'
+  },
+    {
+    label: 'Golf',
+    icon: IoGolfOutline,
+    description: 'Playground for Playing Golf!'
   }
   
 ]
